@@ -9,8 +9,8 @@ u25_3:- u25(1).                                         % 1
 u25_r:- write('Zadej VIN: '),read(VIN),u25(VIN).
 
 % Reseni:
-u25(0):- write(0), nl, !.
-u25(VIN):- to_bin(VIN), nl.
+u25(0) :- write(0), nl, !.
+u25(VIN) :- to_bin(VIN), nl.
 
-to_bin(0):- true, !.
-to_bin(VIN):- M is mod(VIN, 2), D is VIN // 2, to_bin(D), write(M).
+to_bin(0) :- true, !.
+to_bin(VIN) :- M is mod(VIN, 2), D is VIN // 2, to_bin(D), write(M).
